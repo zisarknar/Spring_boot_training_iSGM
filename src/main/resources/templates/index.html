@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout" layout:decorate="master">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>Thymeleaf</h2>
+	<div th:each="user : ${users}">
+		<p th:text="${user.name}"></p>
+	</div>
+	
+</body>
+</html>
