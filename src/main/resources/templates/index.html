@@ -10,14 +10,14 @@
 
 	<section layout:fragment="content">
 
-		<button>Add New User</button>
+		<a th:href="@{/add}">Add New User</a>
 
 		<div th:each="user : ${users}">
 			<p th:text="${user.name}"></p>
 			<p th:text="${user.phone}"></p>
 			<p th:text="${user.address}"></p>
-			<button>Edit</button>
-			<button>Delete</button>
+			<a th:href="@{'/update/'} +${user.id}">Edit</a>
+			<a th:href="@{'/remove/'} +${user.id}">Delete</a>
 		</div>
 	</section>
 

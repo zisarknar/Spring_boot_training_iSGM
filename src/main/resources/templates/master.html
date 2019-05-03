@@ -7,9 +7,10 @@
 </head>
 <body>
 
- 	<header th:insert="fragments/navbar.html :: navbar" />
+ 	<header th:insert="~{fragments/navbar.html :: navbar}"></header>
  	
 	<!-- Main content -->
 	<section layout:fragment="content"></section>
+	
 </body>
 </html>

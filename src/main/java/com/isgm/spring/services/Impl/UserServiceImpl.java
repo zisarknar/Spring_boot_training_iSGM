@@ -27,14 +27,19 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public void removeBtId(Long id) {
-		mRepository.deleteById(id);
+	public void removeBtId(int id) {
+		mRepository.deleteById((long) id);
 	}
 
 	@Override
 	public void addNewUser(User user) {
 		mRepository.saveAndFlush(user);
 		
+	}
+
+	@Override
+	public void update(User oldUser) {
+		mRepository.saveAndFlush(oldUser);
 	}
 
 }

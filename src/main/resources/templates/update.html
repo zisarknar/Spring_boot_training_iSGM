@@ -9,8 +9,8 @@
 <body>
 
 	<section layout:fragment="content">
-		<form role="form" th:action="@{/add}" method="post"
-			th:object="${newUser}">
+		<form role="form" th:action="@{'/update/'} +${oldUser.id}" method="post"
+			th:object="${oldUser}">
 			<div class="form-group">
 				<label for="userName">User Name</label> <input type="text"
 					class="form-control" id="userName" placeholder="Enter User Name" th:field="*{name}" /> <label th:errors="*{name}"
