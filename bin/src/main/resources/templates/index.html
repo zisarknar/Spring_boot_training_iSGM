@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+	layout:decorate="master">
+<head>
+<meta charset="UTF-8">
+<title>Welcome</title>
+</head>
+<body>
+
+	<section layout:fragment="content">
+
+		<button>Add New User</button>
+
+		<div th:each="user : ${users}">
+			<p th:text="${user.name}"></p>
+			<p th:text="${user.phone}"></p>
+			<p th:text="${user.address}"></p>
+			<button>Edit</button>
+			<button>Delete</button>
+		</div>
+	</section>
+
+</body>
+</html>
